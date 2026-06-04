@@ -1,3 +1,4 @@
 /gender_data/*
 /facelens_venv
 .vscode
+/notebooks/.ipynb_checkpoints/*
