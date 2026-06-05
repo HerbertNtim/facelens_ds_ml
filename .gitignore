@@ -3,4 +3,4 @@
 .vscode
 /notebooks/.ipynb_checkpoints/*
 /cropped_faces/*
-/save_data/*
+/save_data/*.pickle
