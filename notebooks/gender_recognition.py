@@ -11,9 +11,16 @@ pca_models = pickle.load(open('../models/pca_dict_50.pickle', mode='rb'))
 model_pca = pca_models['pca']
 mean_face_arr = pca_models['mean_face']
 
-def genderRecognitionPipeline(filename):
+def genderRecognitionPipeline(filename, path=True):
     # Step-01: Read Image
-    img = cv2.imread(filename)
+    if path:
+        img = cv2.imread(filename)
+    else:
+        img = filename
+
+    if img is None:
+        raise ValueError(f"Image not found or invalid path: {filename}")
+    
     # Step-02: Convert into gray scale
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # Step-03: Crop the face using haar cascase classifier

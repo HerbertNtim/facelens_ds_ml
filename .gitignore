@@ -2,6 +2,6 @@
 /facelens_venv
 .vscode
 /notebooks/.ipynb_checkpoints/*
-/notebooks/python_files/.ipynb_checkpoints/*
+/notebooks/__pycache__/*
 /cropped_faces/*
 /save_data/*.pickle
